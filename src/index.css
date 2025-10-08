@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* 新增 DaisyUI 插件 */
 @plugin "daisyui" {
@@ -48,7 +50,5 @@ body {
   a:hover {
     color: #747bff;
   }
-  button {
-    background-color: #f9f9f9;
-  }
+
 }

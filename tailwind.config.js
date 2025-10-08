@@ -11,7 +11,7 @@ module.exports = {
     require('daisyui'),
   ],
 
-  // (可選) 您可以在這裡設定 DaisyUI 的主題
+
   daisyui: {
     themes: ["light", "dark", "cupcake"], // 確保您需要的顏色主題在這裡
   },
