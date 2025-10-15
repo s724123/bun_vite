@@ -1,8 +1,9 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
+import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(),tailwindcss()],
   server: {
         port: 3000,           // 設定開發伺服器埠號
         open: true,           // 自動開啟瀏覽器
