@@ -13,6 +13,6 @@ module.exports = {
 
 
   daisyui: {
-    themes: ["light", "dark", "cupcake"], // 確保您需要的顏色主題在這裡
+    themes: ["cupcake","light", "dark"], // 確保您需要的顏色主題在這裡
   },
 }
