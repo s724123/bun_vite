@@ -91,3 +91,29 @@ For open source projects, say how it is licensed.
 
 ## Project status
 If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+mkdir -p src/{components,pages,hooks,utils,services,assets,styles,stores}
+
+ni src/App.tsx
+ni src/main.tsx
+ni src/index.css
+
+
+ni src/pages/Home.tsx
+ni src/pages/Menu.tsx
+ni src/pages/About.tsx
+ni src/pages/Contact.tsx
+
+ni src/components/layout/Header.tsx
+ni src/components/layout/Footer.tsx
+ni src/components/layout/Sidebar.tsx
+
+
+ni src/components/ui/Button.tsx
+ni src/components/ui/Card.tsx
+ni src/components/ui/Modal.tsx
+
+
+ni src/utils/constants.ts
+ni src/utils/helpers.ts
+ni src/services/api.ts
+ni src/stores/useAppStore.ts
