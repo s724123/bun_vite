@@ -38,6 +38,7 @@ const router = createBrowserRouter([
 // 渲染應用程式
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+      <App/>
     <RouterProvider router={router} />
   </React.StrictMode>,
 )

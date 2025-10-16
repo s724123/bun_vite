@@ -24,6 +24,7 @@ function Home() {
     return (
         <div className="space-y-12">
             {/* 主要橫幅區塊 */}
+            <h1>Home</h1>
             <section className="hero bg-gradient-to-r from-primary/10 to-secondary/10 rounded-lg">
                 <div className="hero-content text-center py-16">
                     <div className="max-w-2xl">
