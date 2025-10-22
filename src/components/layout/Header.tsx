@@ -1,7 +1,7 @@
 // src/components/layout/Header.jsx
 import {useState} from "react";
 import { Link, useLocation } from 'react-router-dom'
-
+import { IconName } from "react-icons/hi2";
 function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const location = useLocation()
@@ -49,7 +49,7 @@ function Header() {
 
                     {/* 手機版下拉選單 */}
                     {isMenuOpen && (
-                        <ul
+                            <ul
                             tabIndex={0}
                             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
                         >
@@ -95,13 +95,13 @@ function Header() {
 
             {/* 右側功能按鈕 */}
             <div className="navbar-end">
-                <div className="dropdown dropdown-end">
+                <div className="dropdown dropdown-end dropdown-bottom">
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                         <div className="w-10 rounded-full bg-primary text-primary-content flex items-center justify-center">
                             <span className="text-sm font-bold">😊</span>
                         </div>
                     </div>
-                    <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+                    <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm menu-horizontal dropdown-content bg-base-100 rounded-box w-52">
                         <li><a>個人資料</a></li>
                         <li><a>設定</a></li>
                         <li><a>登出</a></li>
