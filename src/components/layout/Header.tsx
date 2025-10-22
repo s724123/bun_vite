@@ -1,5 +1,5 @@
 // src/components/layout/Header.jsx
-import React, { useState } from 'react'
+import {useState} from "react";
 import { Link, useLocation } from 'react-router-dom'
 
 function Header() {
@@ -7,7 +7,7 @@ function Header() {
     const location = useLocation()
 
     // 判斷目前路徑是否為活躍狀態
-    const isActive = (path) => {
+    const isActive = (path:string) => {
         if (path === '/' && location.pathname === '/') return true
         if (path !== '/' && location.pathname.startsWith(path)) return true
         return false
