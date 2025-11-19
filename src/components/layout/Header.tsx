@@ -1,7 +1,7 @@
 // src/components/layout/Header.jsx
 import {useState} from "react";
 import { Link, useLocation } from 'react-router-dom'
-import { IconName } from "react-icons/hi2";
+import { HiShoppingBag } from "react-icons/hi2";
 function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const location = useLocation()
@@ -71,7 +71,7 @@ function Header() {
 
                 {/* 網站 Logo */}
                 <Link to="/" className="btn btn-ghost text-xl">
-                    <span className="text-2xl mr-2">🥞</span>
+                    <span className="text-2xl mr-2">🥞<HiShoppingBag/></span>
                     早餐時光
                 </Link>
             </div>
