@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>固定導航列</title>
+    <style>
+        /* 在這裡撰寫 CSS */
+        /* 重置樣式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* 固定導航列 */
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #2c3e50;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    background-color: #34495e;
+}
+
+/* 主要內容 */
+.content {
+    margin-top: 70px; /* 為固定導航留出空間 */
+}
+
+.section {
+    min-height: 100vh;
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.section h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.section p {
+    font-size: 1.1em;
+    color: #666;
+    max-width: 800px;
+}
+
+
+    </style>
+</head>
+<body>
+<nav class="fixed-nav">
+    <div class="nav-container">
+        <div class="logo">我的網站</div>
+        <ul class="nav-menu">
+            <li><a href="#home">首頁</a></li>
+            <li><a href="#about">關於</a></li>
+            <li><a href="#services">服務</a></li>
+            <li><a href="#contact">聯絡</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main class="content">
+    <section id="home" class="section">
+        <h1>首頁</h1>
+        <p>這是首頁內容...</p>
+    </section>
+
+    <section id="about" class="section">
+        <h1>關於我們</h1>
+        <p>這是關於頁面內容...</p>
+    </section>
+
+    <section id="services" class="section">
+        <h1>我們的服務</h1>
+        <p>這是服務頁面內容...</p>
+    </section>
+
+    <section id="contact" class="section">
+        <h1>聯絡我們</h1>
+        <p>這是聯絡頁面內容...</p>
+    </section>
+</main>
+</body>
+</html>
+
