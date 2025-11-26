@@ -1,7 +1,7 @@
 // src/components/layout/Header.jsx
 import {useState} from "react";
 import { Link, useLocation } from 'react-router-dom'
-import { HiShoppingBag } from "react-icons/hi2";
+import { HiBars3 } from "react-icons/hi2";
 function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const location = useLocation()
@@ -32,26 +32,14 @@ function Header() {
                         className="btn btn-ghost lg:hidden"
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                     >
-                        <svg
-                            className="w-5 h-5"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                        >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                d="M4 6h16M4 12h8m-8 6h16"
-                            />
-                        </svg>
+                        <HiBars3 className="h-6 w-6" />
                     </div>
 
                     {/* 手機版下拉選單 */}
-                    {isMenuOpen && (
+                    { (
                             <ul
                             tabIndex={0}
-                            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+                            className="menu menu-sm menu-horizontal dropdown-content  dropdown-bottom mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
                         >
                             {navItems.map((item) => (
                                 <li key={item.path}>
@@ -71,13 +59,13 @@ function Header() {
 
                 {/* 網站 Logo */}
                 <Link to="/" className="btn btn-ghost text-xl">
-                    <span className="text-2xl mr-2">🥞<HiShoppingBag/></span>
+                    <span className="text-2xl mr-2">🥞</span>
                     早餐時光
                 </Link>
             </div>
 
             {/* 桌面版導航選單 */}
-            <div className="navbar-center hidden lg:flex">
+            <div className="navbar-center ">
                 <ul className="menu menu-horizontal px-1">
                     {navItems.map((item) => (
                         <li key={item.path}>
