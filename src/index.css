@@ -1,7 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
+@import "tailwindcss";
 /* 新增 DaisyUI 插件 */
 @plugin "daisyui" {
  themes: cupcake,nord --default, abyss --prefersdark,  dracula;
