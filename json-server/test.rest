@@ -1,0 +1,27 @@
+@port = 3001
+
+###
+GET http://localhost:{{port}}/menu?category=drink
+
+###
+POST http://localhost:{{port}}/menu
+content-type: application/json
+
+{
+    "category": "drink",
+    "name": "海鹽咖啡",
+    "description": "經典歐式咖啡，美味可口",
+    "price": 30,
+    "image": "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=800&q=80"
+}
+
+###
+PATCH  http://localhost:{{port}}/menu/6875
+Content-Type: application/json
+
+{ 
+    "price": 40  
+}
+
+###
+DELETE http://localhost:{{port}}/menu/6875
