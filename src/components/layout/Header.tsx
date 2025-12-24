@@ -39,7 +39,7 @@ function Header() {
                     { (
                             <ul
                             tabIndex={0}
-                            className="menu menu-sm menu-horizontal dropdown-content  dropdown-bottom mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+                            className="menu menu-sm menu-vertical dropdown-content  dropdown-bottom mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
                         >
                             {navItems.map((item) => (
                                 <li key={item.path}>
@@ -66,7 +66,7 @@ function Header() {
 
             {/* 桌面版導航選單 */}
             <div className="navbar-center ">
-                <ul className="menu menu-horizontal px-1">
+                <ul className="menu menu-horizontal px-1 hidden lg:flex">
                     {navItems.map((item) => (
                         <li key={item.path}>
                             <Link
@@ -89,7 +89,7 @@ function Header() {
                             <span className="text-sm font-bold">😊</span>
                         </div>
                     </div>
-                    <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm menu-horizontal dropdown-content bg-base-100 rounded-box w-52">
+                    <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm menu-vertical dropdown-content bg-base-100 rounded-box w-52">
                         <li><a>個人資料</a></li>
                         <li><a>設定</a></li>
                         <li><a>登出</a></li>
