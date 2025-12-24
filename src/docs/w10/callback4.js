@@ -1,29 +1,14 @@
-console.log("before");
-const getRepos = (username)=>{
-    return new Promise((resolve,reject)=>{
-        setTimeout(()=>{
-            console.log('Get repos of user: ${username} from github');
-            resolve (['repo1','repo2','repo3']);
-        },3000
-        )
-    });
-}
-const getUser = (id)=>{
-    return new Promise((resolve,reject)=>{
-        setTimeout(()=>{
-            console.log('Get user data of id: ${id} from db');
-            resolve({id:id,name:"David"});
-            console.log("second");
-        },2000
-        )
-    });
-}
-getUser(1)
-.then((user)=>getRepos(user.name))
-.then((repos)=>{
-    console.log('repos of user remote:',repos);
-    console.log("after");
-})
-.catch((err)=>{
+//Promise
+const p = new Promise((resolve,reject)=>{
+    //kick off some async work
+    setTimeout(()=>{
+        //resolve({id:1,name:"David"});
+        reject (new Error('Something went wrong'));
+    },2000);
+});
+
+p.then((user)=>{
+    console.log('user data remote: id:${user.id}, name:${user.name}');
+}).catch((err)=>{
     console.log('Error:',err);
 });
